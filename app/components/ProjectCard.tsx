@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import type { Project } from "@/app/data/types";
 
@@ -49,34 +50,46 @@ export default function ProjectCard({
       data-cursor="interactive"
     >
       <div
-        className={`relative overflow-hidden rounded-[22px] border p-5 ${mediaClasses[project.accent]} ${borderToneClasses[project.accent]}`}
+        className={`relative overflow-hidden rounded-[22px] border p-0 ${mediaClasses[project.accent]} ${borderToneClasses[project.accent]}`}
       >
         <div className="absolute left-[-12%] top-[-14%] h-24 w-24 rounded-full bg-current/10 blur-2xl" />
         <div className="absolute bottom-[-20%] right-[-8%] h-24 w-24 rounded-full bg-current/10 blur-2xl" />
         <div className="absolute inset-x-5 top-1/2 h-px -translate-y-1/2 bg-current/10" />
 
-        <div className="relative flex aspect-[16/10] flex-col justify-between rounded-[18px] border border-current/10 bg-white/10 p-4">
-          <div className="flex items-center justify-between gap-4">
-            <p className="text-[10px] uppercase tracking-[0.34em] text-current/60">
-              Project Preview
-            </p>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-current/45">
-              Placeholder
-            </span>
-          </div>
-
-          <div>
-            <p className="font-display text-[2.1rem] font-light italic leading-none text-current/80">
-              {project.imagePlaceholder}
-            </p>
-            <p className="mt-3 max-w-[220px] text-xs uppercase tracking-[0.22em] text-current/50">
-              {project.imageHint}
-            </p>
-          </div>
+        <div
+          className={`relative flex aspect-[16/10] overflow-hidden rounded-[18px] border border-current/10 bg-white/10`}
+        >
+          {project.image ? (
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+            />
+          ) : (
+            <div className="flex h-full w-full flex-col justify-between p-4">
+              <div className="flex items-center justify-between gap-4">
+                <p className="text-[10px] uppercase tracking-[0.34em] text-current/60">
+                  Project Preview
+                </p>
+                <span className="text-[10px] uppercase tracking-[0.3em] text-current/45">
+                  Placeholder
+                </span>
+              </div>
+              <div>
+                <p className="font-display text-[2.1rem] font-light italic leading-none text-current/80">
+                  {project.imagePlaceholder}
+                </p>
+                <p className="mt-3 max-w-[220px] text-xs uppercase tracking-[0.22em] text-current/50">
+                  {project.imageHint}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* <div className="mt-6 flex-1"> */}
       <div className="mt-6">
         <p className="text-[11px] uppercase tracking-[0.34em] text-current/60">
           {String(index + 1).padStart(2, "0")} /{" "}
@@ -91,7 +104,6 @@ export default function ProjectCard({
         <p className="mt-4 text-[15px] leading-7 text-current/78">
           {project.summary}
         </p>
-        
       </div>
 
       <div className="mt-6 flex flex-wrap gap-2">
@@ -104,8 +116,6 @@ export default function ProjectCard({
           </span>
         ))}
       </div>
-
-      
     </motion.article>
   );
 }

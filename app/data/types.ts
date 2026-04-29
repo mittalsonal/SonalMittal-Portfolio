@@ -12,6 +12,7 @@ export interface Project {
   metric: string;
   imagePlaceholder: string;
   imageHint: string;
+  image?: string;    
   isMock?: boolean;
 }
 

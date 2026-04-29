@@ -3,6 +3,7 @@ import type { Project } from "./types";
 export const projects: Project[] = [
   {
     id: "ai-second-brain",
+    image: "/images/Project/AI_QuesAnsDark.jpeg",
     title: "AI Second Brain",
     year: "2024",
     accent: "cream",

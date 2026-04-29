@@ -72,43 +72,37 @@ export default function Contact() {
           variants={fadeUp(0)}
           className="relative flex justify-center gap-4"
         >
-          <SocialIcon label="TikTok">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M13 4c.5 1.7 1.8 3.2 4 4"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-              />
-              <path
-                d="M13 4v10.2a3.8 3.8 0 1 1-3.8-3.7"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          <SocialIcon label="GitHub">
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+              className="flex h-full w-full items-center justify-center"
+              aria-label="GitHub"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.5 0-.25-.01-.92-.01-1.8-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.64-1.38-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.72 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.8c.85 0 1.7.12 2.5.36 1.9-1.32 2.74-1.05 2.74-1.05.55 1.42.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.95-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
           </SocialIcon>
-          <SocialIcon label="Instagram">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <rect
-                x="4.5"
-                y="4.5"
-                width="15"
-                height="15"
-                rx="4.2"
-                stroke="currentColor"
-                strokeWidth="1.8"
-              />
-              <circle
-                cx="12"
-                cy="12"
-                r="3.5"
-                stroke="currentColor"
-                strokeWidth="1.8"
-              />
-              <circle cx="17.2" cy="6.9" r="1" fill="currentColor" />
-            </svg>
+          <SocialIcon label="X (Twitter)">
+            <a
+              href={profile.twitter}
+              target="_blank"
+              rel="noreferrer"
+              className="flex h-full w-full items-center justify-center"
+              aria-label="Twitter"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M17.53 3H20.5l-6.56 7.5L21 21h-5.5l-4.3-5.6L6.5 21H3.5l7-8L3 3h5.6l3.9 5.1L17.53 3Zm-1.93 15h1.7L8.6 5h-1.8l8.8 13Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
           </SocialIcon>
           <SocialIcon label="LinkedIn">
             <a
@@ -183,9 +177,6 @@ export default function Contact() {
               <div className="mt-4 px-1">
                 <p className="font-display text-[22px] italic text-foreground">
                   {profile.name}
-                </p>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.28em] text-muted">
-                  Polaroid portrait
                 </p>
               </div>
             </div>

@@ -29,7 +29,7 @@ export default function HomePage() {
           <AboutMeSection />
           <ProjectsSection />
           <AboutSection />
-          <ProcessSection />
+          {/* <ProcessSection /> */}
           <ContactSection />
         </main>
 

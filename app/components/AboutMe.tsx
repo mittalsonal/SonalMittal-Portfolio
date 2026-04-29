@@ -72,10 +72,6 @@ export default function AboutMe() {
             </p>
           </div>
 
-          
-
-
-
         </motion.div>
       </motion.div>
     </div>

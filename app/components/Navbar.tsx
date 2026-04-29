@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 import MagneticButton from "@/app/components/MagneticButton";
 
 const links = [
-  { id: "projects", label: "Projects" },
   { id: "about", label: "About" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
   { id: "process", label: "Process" },
-  { id: "contact", label: "Contact" }
 ];
 
 export default function Navbar() {
