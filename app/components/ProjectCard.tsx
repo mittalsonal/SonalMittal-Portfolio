@@ -76,7 +76,8 @@ export default function ProjectCard({
         </div>
       </div>
 
-      <div className="mt-6 flex-1">
+      {/* <div className="mt-6 flex-1"> */}
+      <div className="mt-6">
         <p className="text-[11px] uppercase tracking-[0.34em] text-current/60">
           {String(index + 1).padStart(2, "0")} /{" "}
           {String(total).padStart(2, "0")}
@@ -90,9 +91,7 @@ export default function ProjectCard({
         <p className="mt-4 text-[15px] leading-7 text-current/78">
           {project.summary}
         </p>
-        <p className="mt-5 rounded-[20px] border border-current/10 px-4 py-3 font-display text-2xl font-light italic text-current/72">
-          {project.metric}
-        </p>
+        
       </div>
 
       <div className="mt-6 flex flex-wrap gap-2">
@@ -106,14 +105,7 @@ export default function ProjectCard({
         ))}
       </div>
 
-      <div className="mt-8 flex items-start justify-between gap-5 border-t border-current/10 pt-6">
-        <p className="text-sm leading-7 text-current/70">{project.impact}</p>
-        <div
-          className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 ${arrowClasses[project.accent]}`}
-        >
-          -&gt;
-        </div>
-      </div>
+      
     </motion.article>
   );
 }

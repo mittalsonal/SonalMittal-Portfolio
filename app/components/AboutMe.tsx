@@ -37,23 +37,7 @@ export default function AboutMe() {
             <div className="absolute inset-0 rounded-[170px] bg-gradient-to-b from-white/10 via-transparent to-walnut/8" />
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-line/50 bg-white/35 px-4 py-4 backdrop-blur-sm sm:px-6">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="font-display text-2xl font-light text-foreground">
-                  {profile.name}
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.26em] text-muted">
-                  About portrait
-                </p>
-              </div>
-
-              <div className="inline-flex items-center gap-3">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#7EB58A] shadow-[0_0_16px_rgba(126,181,138,0.7)]" />
-                <p className="text-sm text-[#6b5f54]">{profile.availability}</p>
-              </div>
-            </div>
-          </div>
+          
         </motion.div>
 
         <motion.div
@@ -88,13 +72,7 @@ export default function AboutMe() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-5 text-sm leading-8 text-[#6b5f54] sm:grid-cols-2">
-            {profile.quickFacts.map((fact) => (
-              <div key={fact} className="border-b border-line/60 pb-4">
-                {fact}
-              </div>
-            ))}
-          </div>
+          
 
 
 
