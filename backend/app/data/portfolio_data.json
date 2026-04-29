@@ -1,0 +1,79 @@
+{
+  "profile": {
+    "name": "Sonal Mittal",
+    "role": "Full Stack Engineer & AI Builder",
+    "summary": "Full Stack Engineer with hands-on experience in Next.js, Node.js, Django, and MongoDB, with deep integration of LLMs, LangChain, and Generative AI into production systems.",
+    "status": "Open to full-time software engineering and AI/ML opportunities."
+  },
+  "contact": {
+    "email": "sonalmittal140103@gmail.com",
+    "phone": "+91 7068229535",
+    "github": "https://github.com/mittalsonal",
+    "linkedin": "https://linkedin.com/in/mittalsonal"
+  },
+  "education": {
+    "degree": "B.Tech Computer Science (AI/ML)",
+    "school": "GLA University, Mathura",
+    "timeline": "Graduating June 2025"
+  },
+  "projects": [
+    {
+      "title": "AI Second Brain",
+      "year": "2024",
+      "tech": ["RAG", "Next.js", "FastAPI", "MongoDB", "LangChain"],
+      "summary": "An AI-powered knowledge system with semantic search, note retrieval, and PDF processing for context-aware answers.",
+      "impact": "Turned personal documents and notes into a searchable, assistant-style interface with grounded responses."
+    },
+    {
+      "title": "LinkedIn Post Generator",
+      "year": "2024",
+      "tech": ["LLaMA 3.2", "LangChain", "Python", "Groq Cloud", "Streamlit"],
+      "summary": "An end-to-end LLM content workflow that generates polished LinkedIn drafts using chained prompts.",
+      "impact": "Reduced manual drafting effort by 60 percent while keeping the workflow easy to refine."
+    },
+    {
+      "title": "Learning Platform",
+      "year": "2025",
+      "tech": ["React", "Node.js", "Express", "OpenCV", "TensorFlow"],
+      "summary": "A full-stack learning platform built for 500 plus users with object detection and voice features.",
+      "impact": "Improved usability and speed while expanding the learning experience with AI-assisted capabilities."
+    },
+    {
+      "title": "Production APIs at Akoode",
+      "year": "2025",
+      "tech": ["Next.js", "Node.js", "Django", "MongoDB", "REST APIs"],
+      "summary": "Production-facing platform work spanning frontend delivery, API optimization, and AI feature integration.",
+      "impact": "Reduced response latency by 20 percent and supported stronger delivery velocity across projects."
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "Akoode Technologies",
+      "period": "June 2025 - Present",
+      "summary": "Leading delivery across multiple projects with a focus on scalable architecture, API quality, and AI-enabled product features.",
+      "bullets": [
+        "Led SDLC for multiple projects using Next.js, Node.js, and MongoDB.",
+        "Optimized Django and Flask APIs, reducing response latency by 20 percent.",
+        "Improved team performance by 30 percent through stronger architectural decisions."
+      ]
+    },
+    {
+      "role": "Full Stack Developer",
+      "company": "KodeVortex",
+      "period": "Aug 2024 - June 2025",
+      "summary": "Built product features across the stack and introduced AI-assisted capabilities into the learning experience.",
+      "bullets": [
+        "Built a learning platform serving 500 plus users with React, Node.js, and Express.",
+        "Integrated object detection with OpenCV and TensorFlow plus voice APIs.",
+        "Reduced application load time by 25 percent through optimization and indexing improvements."
+      ]
+    }
+  ],
+  "skills": {
+    "frontend": ["Next.js", "React", "Tailwind CSS", "TypeScript", "HTML", "CSS"],
+    "backend": ["Node.js", "Express", "Django", "Flask", "REST APIs", "MongoDB"],
+    "ai_ml": ["LLMs", "LangChain", "RAG", "TensorFlow", "OpenCV", "GenAI", "Scikit-learn"],
+    "tools": ["Git", "GitHub", "Postman", "Jupyter", "Streamlit", "SQL"]
+  }
+}
