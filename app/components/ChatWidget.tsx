@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 
 import { profile } from "@/app/data/profile";
 import type { ChatMessage } from "@/app/utils/assistant";
@@ -111,13 +112,13 @@ export default function ChatWidget() {
           >
             <div className="flex items-center gap-3 border-b border-line/70 bg-deep px-4 py-3 text-background">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-walnut font-display text-base italic">
-                S
+                SM
               </div>
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-medium">Sonal AI Assistant</p>
-                <p className="truncate text-xs text-background/50">
+                {/* <p className="truncate text-xs text-background/50">
                   Recruiter-friendly portfolio guide
-                </p>
+                </p> */}
               </div>
               <a
                 href={profile.resumePath}
@@ -211,16 +212,22 @@ export default function ChatWidget() {
       </AnimatePresence>
 
       <motion.button
-        type="button"
-        whileHover={{ y: -4, scale: 1.04 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={() => setOpen((current) => !current)}
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-deep text-background shadow-glow"
-        aria-label="Open chat assistant"
-        data-cursor="interactive"
-      >
-        <span className="font-display text-2xl italic">AI</span>
-      </motion.button>
+  type="button"
+  whileHover={{ y: -4, scale: 1.04 }}
+  whileTap={{ scale: 0.98 }}
+  onClick={() => setOpen((current) => !current)}
+  className="flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-deep text-background shadow-glow"
+  aria-label="Open chat assistant"
+  data-cursor="interactive"
+>
+  <Image
+    src="/images/chatbot.png"
+    alt="Chatbot"
+    width={32}
+    height={32}
+    className="object-contain invert"
+  />
+</motion.button>
     </div>
   );
 }

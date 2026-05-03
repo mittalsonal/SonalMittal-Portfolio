@@ -1,8 +1,8 @@
 {
   "profile": {
     "name": "Sonal Mittal",
-    "role": "Full Stack Engineer & AI Builder",
-    "summary": "Full Stack Engineer with hands-on experience in Next.js, Node.js, Django, and MongoDB, with deep integration of LLMs, LangChain, and Generative AI into production systems.",
+    "role": "Full Stack Developer | AI Engineer",
+    "summary": "Full Stack Developer | AI Engineer with hands-on experience in Next.js, Node.js, Django, and MongoDB, with deep integration of LLMs, LangChain, and Generative AI into production systems.",
     "status": "Open to full-time software engineering and AI/ML opportunities."
   },
   "contact": {
@@ -32,19 +32,26 @@
       "impact": "Reduced manual drafting effort by 60 percent while keeping the workflow easy to refine."
     },
     {
-      "title": "Learning Platform",
-      "year": "2025",
-      "tech": ["React", "Node.js", "Express", "OpenCV", "TensorFlow"],
-      "summary": "A full-stack learning platform built for 500 plus users with object detection and voice features.",
-      "impact": "Improved usability and speed while expanding the learning experience with AI-assisted capabilities."
-    },
-    {
-      "title": "Production APIs at Akoode",
-      "year": "2025",
-      "tech": ["Next.js", "Node.js", "Django", "MongoDB", "REST APIs"],
-      "summary": "Production-facing platform work spanning frontend delivery, API optimization, and AI feature integration.",
-      "impact": "Reduced response latency by 20 percent and supported stronger delivery velocity across projects."
-    }
+    "title": "AI Second Brain",
+    "year": "2024",
+    "tech": ["RAG", "Next.js", "FastAPI", "MongoDB", "LangChain"],
+    "summary": "An AI-powered knowledge system with semantic search, note retrieval, and PDF processing for context-aware answers.",
+    "impact": "Turned personal documents and notes into a searchable assistant with accurate, context-grounded responses."
+  },
+  {
+    "title": "BigCat Realty Platform",
+    "year": "2025",
+    "tech": ["React", "Next.js", "Node.js", "Express", "MongoDB"],
+    "summary": "A modern real estate platform for discovering and exploring residential and commercial properties across prime locations.",
+    "impact": "Improved user engagement and lead generation through intuitive design, faster search, and seamless browsing."
+  },
+  {
+    "title": "Blue Collar Construction LLC",
+    "year": "2025",
+    "tech": ["Next.js", "React", "Node.js", "Tailwind CSS"],
+    "summary": "A construction and remodeling website showcasing services, projects, and a streamlined client inquiry experience.",
+    "impact": "Increased client trust and inquiries through strong visual presentation and optimized performance."
+  }
   ],
   "experience": [
     {

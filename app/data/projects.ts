@@ -70,88 +70,88 @@ export const projects: Project[] = [
     link: "https://github.com/mittalsonal/Linkdin-Post-Generator-" // 🔗 replace with real URL
   },
   {
-    id: "akoode-production-apis",
-    title: "Production APIs at Akoode",
-    year: "2025",
-    accent: "walnut",
-    label: "Backend engineering",
-    tech: ["Next.js", "Node.js", "Django", "MongoDB", "REST APIs"],
-    summary:
-      "Production-facing platform work spanning frontend delivery, API optimization, and AI feature integration for client systems.",
-    impact:
-      "Reduced response latency by 20 percent and supported stronger delivery velocity across multiple projects.",
-    metric: "20 percent faster API response",
-    imagePlaceholder: "API Architecture",
-    imageHint: "Service layers, latency optimization"
-    // no link → card shows "Coming soon" on hover
-  }
+  id: "relisync-crm-platform",
+  title: "Relisync CRM Platform",
+  year: "2026",
+  accent: "walnut",
+  label: "Full-stack product",
+  tech: ["React", "Next.js", "Node.js", "MongoDB", "CRM Systems"],
+  summary:
+    "A scalable real estate CRM platform that centralizes property listings, buyer management, visit tracking, and team collaboration into one intelligent system.",
+  impact:
+    "Enhanced operational efficiency for property advisors by simplifying lead management, improving visibility across listings, and enabling data-driven decision making.",
+  metric: "End-to-end real estate workflow automation",
+  imagePlaceholder: "CRM Dashboard & Analytics",
+  imageHint: "Dashboard, leads, visits, analytics, collaboration",
+  link: "https://relisync.akoodedemo.com/"
+}
 ];
 
 export const mockProjects: Project[] = [
-  {
-    id: "insight-dashboard",
-    title: "Insight Dashboard",
-    year: "2026",
-    accent: "cream",
-    label: "Analytics concept",
-    tech: ["Next.js", "TypeScript", "Charts", "PostgreSQL"],
-    summary:
-      "A premium analytics workspace designed to turn business signals into clean, actionable decision flows.",
-    impact:
-      "Created a calmer reporting experience with role-based dashboards, modular widgets, and faster executive visibility.",
-    metric: "Executive-ready reporting",
-    imagePlaceholder: "Data Panels",
-    imageHint: "Filters, charts, KPI snapshots",
-    isMock: true
-  },
-  {
-    id: "vision-commerce-assistant",
-    title: "Vision Commerce Assistant",
-    year: "2026",
-    accent: "cream",
-    label: "AI commerce concept",
-    tech: ["Python", "FastAPI", "OpenCV", "Vector Search"],
-    summary:
-      "A concept assistant that blends product search with visual similarity and conversational recommendations.",
-    impact:
-      "Imagined a smoother shopping flow where discovery feels guided, visual, and much more contextual.",
-    metric: "Visual product discovery",
-    imagePlaceholder: "Vision Search",
-    imageHint: "Image matching, product recall",
-    isMock: true
-  },
-  {
-    id: "smart-interview-prep",
-    title: "Smart Interview Prep",
-    year: "2026",
-    accent: "walnut",
-    label: "Ed-tech concept",
-    tech: ["React", "Node.js", "LLMs", "MongoDB"],
-    summary:
-      "A guided prep platform for technical candidates with adaptive question sets and personalized feedback loops.",
-    impact:
-      "Framed a more supportive interview-prep journey through structured practice and AI-generated improvement cues.",
-    metric: "Adaptive prep journeys",
-    imagePlaceholder: "Practice Studio",
-    imageHint: "Question sets, scores, feedback",
-    isMock: true
-  },
-  {
-    id: "content-ops-studio",
-    title: "ContentOps Studio",
-    year: "2026",
-    accent: "dark",
-    label: "Workflow concept",
-    tech: ["Next.js", "Server Actions", "CMS", "Automation"],
-    summary:
-      "A content operations concept focused on approvals, campaign workflows, and reusable brand publishing systems.",
-    impact:
-      "Explored how editorial teams could move faster with cleaner governance and fewer repetitive coordination steps.",
-    metric: "Faster approval cycles",
-    imagePlaceholder: "Editorial Board",
-    imageHint: "Publishing queues, reviews, approvals",
-    isMock: true
-  }
+  // {
+  //   id: "insight-dashboard",
+  //   title: "Insight Dashboard",
+  //   year: "2026",
+  //   accent: "cream",
+  //   label: "Analytics concept",
+  //   tech: ["Next.js", "TypeScript", "Charts", "PostgreSQL"],
+  //   summary:
+  //     "A premium analytics workspace designed to turn business signals into clean, actionable decision flows.",
+  //   impact:
+  //     "Created a calmer reporting experience with role-based dashboards, modular widgets, and faster executive visibility.",
+  //   metric: "Executive-ready reporting",
+  //   imagePlaceholder: "Data Panels",
+  //   imageHint: "Filters, charts, KPI snapshots",
+  //   isMock: true
+  // },
+  // {
+  //   id: "vision-commerce-assistant",
+  //   title: "Vision Commerce Assistant",
+  //   year: "2026",
+  //   accent: "cream",
+  //   label: "AI commerce concept",
+  //   tech: ["Python", "FastAPI", "OpenCV", "Vector Search"],
+  //   summary:
+  //     "A concept assistant that blends product search with visual similarity and conversational recommendations.",
+  //   impact:
+  //     "Imagined a smoother shopping flow where discovery feels guided, visual, and much more contextual.",
+  //   metric: "Visual product discovery",
+  //   imagePlaceholder: "Vision Search",
+  //   imageHint: "Image matching, product recall",
+  //   isMock: true
+  // },
+  // {
+  //   id: "smart-interview-prep",
+  //   title: "Smart Interview Prep",
+  //   year: "2026",
+  //   accent: "walnut",
+  //   label: "Ed-tech concept",
+  //   tech: ["React", "Node.js", "LLMs", "MongoDB"],
+  //   summary:
+  //     "A guided prep platform for technical candidates with adaptive question sets and personalized feedback loops.",
+  //   impact:
+  //     "Framed a more supportive interview-prep journey through structured practice and AI-generated improvement cues.",
+  //   metric: "Adaptive prep journeys",
+  //   imagePlaceholder: "Practice Studio",
+  //   imageHint: "Question sets, scores, feedback",
+  //   isMock: true
+  // },
+  // {
+  //   id: "content-ops-studio",
+  //   title: "ContentOps Studio",
+  //   year: "2026",
+  //   accent: "dark",
+  //   label: "Workflow concept",
+  //   tech: ["Next.js", "Server Actions", "CMS", "Automation"],
+  //   summary:
+  //     "A content operations concept focused on approvals, campaign workflows, and reusable brand publishing systems.",
+  //   impact:
+  //     "Explored how editorial teams could move faster with cleaner governance and fewer repetitive coordination steps.",
+  //   metric: "Faster approval cycles",
+  //   imagePlaceholder: "Editorial Board",
+  //   imageHint: "Publishing queues, reviews, approvals",
+  //   isMock: true
+  // }
 ];
 
 export const homeProjects = projects.slice(0, 3);

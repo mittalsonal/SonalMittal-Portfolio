@@ -5,7 +5,7 @@ export const profile = {
   headline: "Building scalable systems with intelligence and precision",
 
   summary:
-    "Full Stack Engineer with hands-on experience in Next.js, Node.js, Django, and MongoDB, with deep integration of LLMs, LangChain, and Generative AI into production systems.",
+    "Full Stack Developer | AI Engineer with hands-on experience in Next.js, Node.js, Django, and MongoDB, with deep integration of LLMs, LangChain, and Generative AI into production systems.",
 
   shortBio:
     "I build scalable AI-powered systems that solve real problems. My work blends product thinking, backend reliability, and practical AI implementation.",

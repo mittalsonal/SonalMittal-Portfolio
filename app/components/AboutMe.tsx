@@ -44,7 +44,7 @@ export default function AboutMe() {
           variants={fadeUp(0.1)}
           className="flex flex-col justify-center"
         >
-          <p className="editorial-label">Full Stack Engineer &amp; AI Builder</p>
+          <p className="editorial-label">Full Stack Developer | AI Engineer</p>
           <h2 className="mt-4 font-sans text-[clamp(3.3rem,8vw,6.2rem)] font-semibold uppercase leading-[0.9] text-foreground">
             About Me
           </h2>
@@ -54,7 +54,7 @@ export default function AboutMe() {
 
           <div className="mt-8 max-w-[760px] space-y-6 text-[16px] leading-9 text-[#463b34]">
             <p>
-              I am a full stack engineer with a strong interest in building
+              I am a full stack developer | AI engineer with a strong interest in building
               intelligent, scalable products that feel elegant in use and
               dependable underneath. My work usually lives at the intersection
               of modern frontend systems, backend architecture, and applied AI.
