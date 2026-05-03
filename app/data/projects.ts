@@ -15,9 +15,45 @@ export const projects: Project[] = [
       "Turned personal documents and notes into a searchable, assistant-style interface with accurate, grounded responses.",
     metric: "Context-aware Q&A over personal knowledge",
     imagePlaceholder: "Knowledge Graph",
-    imageHint: "Search, retrieval, grounded answers"
+    imageHint: "Search, retrieval, grounded answers",
+    link: "https://github.com/mittalsonal/AI-Second-Brain" // 🔗 replace with real URL
   },
+  
   {
+  id: "bigcat-realty",
+  image: "/images/Project/Bigcat.png",
+  title: "BigCat Realty Platform",
+  year: "2025",
+  accent: "walnut",
+  label: "Full-stack product",
+  tech: ["React", "Next.js", "Node.js", "Express", "MongoDB"],
+  summary:
+    "A modern real estate platform designed to help users discover, compare, and explore residential and commercial properties across prime locations with a seamless browsing experience.",
+  impact:
+    "Enhanced property discovery with intuitive UI, improved lead generation flow, and optimized performance for faster search and better user engagement.",
+  metric: "High-conversion property discovery platform",
+  imagePlaceholder: "Real Estate Dashboard",
+  imageHint: "Property search, listings, city exploration",
+  link: "https://www.bigcatrealty.com/" 
+},
+{
+  id: "blue-collar-construction",
+  image: "/images/Project/bluecollar.png",
+  title: "Blue Collar Construction LLC",
+  year: "2025",
+  accent: "dark",
+  label: "Full-stack website",
+  tech: ["Next.js", "React", "Node.js", "Tailwind CSS"],
+  summary:
+    "A modern remodeling and construction website built to showcase residential and commercial services, project portfolios, and a streamlined customer inquiry experience for homeowners and businesses.",
+  impact:
+    "Improved lead generation and client trust through a clean UI, structured service presentation, and optimized performance across devices.",
+  metric: "40+ projects showcased with strong client engagement",
+  imagePlaceholder: "Construction & Remodeling Showcase",
+  imageHint: "Kitchen remodels, residential projects, service sections",
+  link: "https://bluecollarbuilding.com/"
+},
+{
     id: "linkedin-post-generator",
     title: "LinkedIn Post Generator",
     year: "2024",
@@ -30,22 +66,8 @@ export const projects: Project[] = [
       "Reduced manual drafting effort by 60 percent while keeping output structured, on-brand, and easy to refine.",
     metric: "60 percent less manual drafting",
     imagePlaceholder: "Prompt Flow",
-    imageHint: "Draft generation, refinement, tone control"
-  },
-  {
-    id: "learning-platform",
-    title: "Learning Platform",
-    year: "2025",
-    accent: "cream",
-    label: "Full-stack product",
-    tech: ["React", "Node.js", "Express", "OpenCV", "TensorFlow"],
-    summary:
-      "A full-stack learning platform built for 500 plus users with object detection and voice capabilities integrated into the experience.",
-    impact:
-      "Improved usability and performance while expanding the platform into richer AI-enabled learning flows.",
-    metric: "500 plus active users",
-    imagePlaceholder: "Student Dashboard",
-    imageHint: "Voice, learning paths, computer vision"
+    imageHint: "Draft generation, refinement, tone control",
+    link: "https://github.com/mittalsonal/Linkdin-Post-Generator-" // 🔗 replace with real URL
   },
   {
     id: "akoode-production-apis",
@@ -61,6 +83,7 @@ export const projects: Project[] = [
     metric: "20 percent faster API response",
     imagePlaceholder: "API Architecture",
     imageHint: "Service layers, latency optimization"
+    // no link → card shows "Coming soon" on hover
   }
 ];
 
@@ -85,7 +108,7 @@ export const mockProjects: Project[] = [
     id: "vision-commerce-assistant",
     title: "Vision Commerce Assistant",
     year: "2026",
-    accent: "dark",
+    accent: "cream",
     label: "AI commerce concept",
     tech: ["Python", "FastAPI", "OpenCV", "Vector Search"],
     summary:
@@ -117,7 +140,7 @@ export const mockProjects: Project[] = [
     id: "content-ops-studio",
     title: "ContentOps Studio",
     year: "2026",
-    accent: "cream",
+    accent: "dark",
     label: "Workflow concept",
     tech: ["Next.js", "Server Actions", "CMS", "Automation"],
     summary:

@@ -6,14 +6,14 @@ export default function Footer() {
       <div className="shell flex flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between">
         <p>&copy; 2026 {profile.name}. All rights reserved.</p>
         <div className="flex flex-wrap items-center gap-5">
-          <a href="/#projects" data-cursor="interactive">
-            Projects
+          <a href="/#home" data-cursor="interactive">
+            Homefu
           </a>
-          <a href="/#about" data-cursor="interactive">
+          <a href="/#about-me" data-cursor="interactive">
             About
           </a>
-          <a href="/#process" data-cursor="interactive">
-            Process
+          <a href="/#projects" data-cursor="interactive">
+            Projects
           </a>
           <a href="/#contact" data-cursor="interactive">
             Contact

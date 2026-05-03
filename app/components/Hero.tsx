@@ -262,19 +262,19 @@ export default function Hero() {
               <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-deep via-deep/65 to-transparent z-10" />
               <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-deep/20 to-transparent z-10" />
 
-              <FloatingPill className="right-4 top-4 z-20" delay={1.0}>
+              {/* <FloatingPill className="right-4 top-4 z-20" delay={1.0}>
                 <span className="h-1.5 w-1.5 rounded-full bg-walnut/60" />
                 <span className="text-[10px] uppercase tracking-[0.2em] text-background/55">Featured</span>
-              </FloatingPill>
+              </FloatingPill> */}
 
-              <FloatingPill className="left-4 bottom-16 z-20" delay={1.2}>
+              {/* <FloatingPill className="left-4 bottom-16 z-20" delay={1.2}>
                 <motion.span
                   animate={{ opacity: [1, 0.4, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                   className="h-2 w-2 rounded-full bg-[#7EB58A] shadow-[0_0_10px_rgba(126,181,138,0.8)]"
                 />
                 <span className="text-[10px] text-background/60">Available for hire</span>
-              </FloatingPill>
+              </FloatingPill> */}
             </div>
 
             <div className="relative -mt-2 space-y-2.5 px-5 pb-5 z-20">

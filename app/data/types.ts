@@ -13,6 +13,7 @@ export interface Project {
   imagePlaceholder: string;
   imageHint: string;
   image?: string;    
+  link?: string;
   isMock?: boolean;
 }
 

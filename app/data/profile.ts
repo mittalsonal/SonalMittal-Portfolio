@@ -1,6 +1,6 @@
 export const profile = {
   name: "Sonal Mittal",
-  role: "Full Stack Engineer & AI Builder",
+  role: "Full Stack Developer & AI Engineer",
   shortRole: "AI Engineer",
   headline: "Building scalable systems with intelligence and precision",
 

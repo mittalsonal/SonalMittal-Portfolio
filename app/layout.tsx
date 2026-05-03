@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Sonal Mittal | Full Stack Engineer & AI Builder",
+  title: "Sonal Mittal Portfolio",
   description:
     "Luxury editorial portfolio for Sonal Mittal, a Full Stack Engineer focused on scalable systems, AI-powered products, and thoughtful user experiences.",
   icons: {
