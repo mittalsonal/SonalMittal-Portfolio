@@ -15,7 +15,7 @@ export const profile = {
 
   status: "Open to full-time software engineering and AI/ML opportunities.",
   availability: "Open to opportunities",
-  graduation: "June 2025 graduate",
+  graduation: "May 2025 graduate",
   education: "B.Tech Computer Science (AI/ML), GLA University, Mathura",
 
   email: "sonalmittal140103@gmail.com",

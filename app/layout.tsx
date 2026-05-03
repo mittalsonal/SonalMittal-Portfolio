@@ -21,7 +21,17 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Sonal Mittal | Full Stack Engineer & AI Builder",
   description:
-    "Luxury editorial portfolio for Sonal Mittal, a Full Stack Engineer focused on scalable systems, AI-powered products, and thoughtful user experiences."
+    "Luxury editorial portfolio for Sonal Mittal, a Full Stack Engineer focused on scalable systems, AI-powered products, and thoughtful user experiences.",
+  icons: {
+    icon: [
+      { url: "/images/favicon.png", sizes: "32x32",   type: "image/png" },
+      { url: "/images/favicon.png", sizes: "64x64",   type: "image/png" },
+      { url: "/images/favicon.png", sizes: "192x192", type: "image/png" },
+      { url: "/images/favicon.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/images/favicon.png",
+    apple:    { url: "/images/favicon.png", sizes: "180x180", type: "image/png" },
+  },
 };
 
 export default function RootLayout({

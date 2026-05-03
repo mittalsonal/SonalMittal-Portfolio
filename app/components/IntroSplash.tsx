@@ -86,7 +86,7 @@ export default function IntroSplash() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 1 }}
             >
-              Scroll, tap, or wait to enter
+              Full Stack Developer & AI Engineer
             </motion.p>
           </div>
         </motion.div>

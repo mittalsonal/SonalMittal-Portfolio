@@ -2,14 +2,11 @@
 
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
 import Image from "next/image";
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 
 import MagneticButton from "@/app/components/MagneticButton";
 import { profile } from "@/app/data/profile";
 import { fadeUp, staggerContainer } from "@/app/utils/animations";
-
-
-
 
 
 /* ─── Floating pill ──────────────────────────────────────────── */
@@ -47,12 +44,12 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const textY  = useTransform(scrollYProgress, [0, 1], [0, 50]);
-  const glowX  = useTransform(springX, [-300, 300], [-30, 30]);
-  const glowY  = useTransform(springY, [-300, 300], [-30, 30]);
-  const glowXNeg = useTransform(springX, [-300, 300], [15, -15]);
-  const glowYNeg = useTransform(springY, [-300, 300], [15, -15]);
+  const imageY    = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const textY     = useTransform(scrollYProgress, [0, 1], [0, 50]);
+  const glowX     = useTransform(springX, [-300, 300], [-30, 30]);
+  const glowY     = useTransform(springY, [-300, 300], [-30, 30]);
+  const glowXNeg  = useTransform(springX, [-300, 300], [15, -15]);
+  const glowYNeg  = useTransform(springY, [-300, 300], [15, -15]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = sectionRef.current?.getBoundingClientRect();
@@ -61,11 +58,20 @@ export default function Hero() {
     mouseY.set(e.clientY - rect.top - rect.height / 2);
   };
 
+  // ✅ Updated headline: "I build scalable systems powered by intelligent decision-making."
   const headline = [
-    [{ text: "Building", italic: false, walnut: false }, { text: "scalable", italic: true, walnut: true }],
-    [{ text: "systems", italic: false, walnut: false }, { text: "with", italic: false, walnut: false }],
-    [{ text: "intelligence", italic: false, walnut: false }],
-    [{ text: "&", italic: true, walnut: false, muted: true }, { text: "precision.", italic: true, walnut: false, muted: true }],
+    [
+      { text: "I build", italic: false, walnut: false },
+      { text: "scalable", italic: true, walnut: true },
+    ],
+    [
+      { text: "systems", italic: false, walnut: false },
+      { text: "powered by", italic: false, walnut: false },
+    ],
+    [
+      { text: "intelligent", italic: true, walnut: false, muted: true },
+      { text: "decision-making.", italic: true, walnut: false, muted: true },
+    ],
   ];
 
   return (
@@ -84,9 +90,7 @@ export default function Hero() {
         className="pointer-events-none absolute bottom-[5%] left-[2%] h-[380px] w-[380px] rounded-full bg-walnut/7 blur-[100px]"
       />
 
-
-      {/* Main grid */}
-      <div className="relative grid min-h-screen items-center gap-10 pt-20 pb-10 lg:grid-cols-[1fr_460px] lg:gap-14 xl:grid-cols-[1fr_500px]">
+      <div className="relative grid min-h-screen items-center gap-10 pt-32 pb-10 lg:grid-cols-[1fr_400px] lg:gap-14 xl:grid-cols-[1fr_420px]">
 
         {/* ── LEFT: Text ── */}
         <motion.div
@@ -96,7 +100,7 @@ export default function Hero() {
           animate="show"
           className="z-10 flex flex-col justify-center"
         >
-          {/* Role label with animated line */}
+          {/* Role label */}
           <motion.div variants={fadeUp(0)} className="flex items-center gap-3">
             <motion.span
               initial={{ scaleX: 0 }}
@@ -108,18 +112,9 @@ export default function Hero() {
             <span className="editorial-label">{profile.role}</span>
           </motion.div>
 
-          {/* ── FIXED: Word-by-word headline with descender fix ── */}
-          {/*
-            FIX EXPLAINED:
-            - Removed `leading-[0.92]` from className to avoid Tailwind overriding our inline style
-            - lineHeight: "0.96" gives slightly more room than 0.92 while keeping the tight look
-            - Each line span gets paddingBottom: "0.18em" so descenders (g, y, j, p, q)
-              are not clipped by overflow-hidden
-            - marginBottom: "-0.18em" cancels the extra padding so line spacing stays tight
-          */}
           <h1
             className="mt-6 font-light text-foreground"
-            style={{ fontSize: "clamp(3rem,7vw,6rem)", lineHeight: "0.96" }}
+            style={{ fontSize: "clamp(3.2rem,6.5vw,5.5rem)", lineHeight: "0.97" }}
           >
             {headline.map((line, li) => (
               <span
@@ -182,9 +177,9 @@ export default function Hero() {
           {/* Social links */}
           <motion.div variants={fadeUp(0.58)} className="mt-8 flex items-center gap-5">
             {[
-              { label: "GitHub", href: profile.github },
+              { label: "GitHub",   href: profile.github   },
               { label: "LinkedIn", href: profile.linkedin },
-              { label: "Twitter", href: profile.twitter },
+              { label: "Twitter",  href: profile.twitter  },
             ].map((s) => (
               <motion.a
                 key={s.label}
@@ -209,7 +204,6 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           className="relative flex items-center justify-center lg:justify-end pb-10 lg:pb-16"
         >
-          {/* Slow spinning outer rings */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 70, ease: "linear", repeat: Infinity }}
@@ -221,14 +215,11 @@ export default function Hero() {
             className="absolute inset-[-16px] rounded-[40px] border border-walnut/6 pointer-events-none"
           />
 
-          {/* Card */}
           <div className="relative w-full overflow-hidden rounded-[28px] border border-white/10 bg-deep shadow-glow">
-            {/* Internal glows */}
             <div className="pointer-events-none absolute left-[-20%] top-[5%] h-80 w-80 rounded-full bg-walnut/22 blur-3xl" />
             <div className="pointer-events-none absolute right-[-15%] bottom-[10%] h-64 w-64 rounded-full bg-white/5 blur-3xl" />
 
-            {/* Top bar */}
-            <div className="relative flex items-center justify-between px-6 pt-6 z-10">
+            <div className="relative flex items-center justify-between px-5 pt-5 z-10">
               <motion.span
                 initial={{ opacity: 0, x: -12 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -247,8 +238,7 @@ export default function Hero() {
               </motion.span>
             </div>
 
-            {/* Photo */}
-            <div className="relative mt-4 h-[420px] sm:h-[480px] lg:h-[510px] w-full overflow-hidden">
+            <div className="relative mt-3 h-[340px] sm:h-[380px] lg:h-[400px] w-full overflow-hidden">
               <p className="pointer-events-none absolute inset-0 flex items-center justify-center select-none font-display text-[6rem] italic text-walnut/6 leading-none z-0">
                 Sonal
               </p>
@@ -263,23 +253,21 @@ export default function Hero() {
                   src="/images/HeroSection.jpeg"
                   alt="Sonal Mittal"
                   fill
-                  sizes="(max-width: 1024px) 90vw, 500px"
+                  sizes="(max-width: 1024px) 90vw, 420px"
                   className="object-cover object-top"
                   priority
                 />
               </motion.div>
 
-              {/* Gradients */}
-              <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-deep via-deep/65 to-transparent z-10" />
-              <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-deep/20 to-transparent z-10" />
+              <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-deep via-deep/65 to-transparent z-10" />
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-deep/20 to-transparent z-10" />
 
-              {/* Floating pills on photo */}
               <FloatingPill className="right-4 top-4 z-20" delay={1.0}>
                 <span className="h-1.5 w-1.5 rounded-full bg-walnut/60" />
                 <span className="text-[10px] uppercase tracking-[0.2em] text-background/55">Featured</span>
               </FloatingPill>
 
-              <FloatingPill className="left-4 bottom-20 z-20" delay={1.2}>
+              <FloatingPill className="left-4 bottom-16 z-20" delay={1.2}>
                 <motion.span
                   animate={{ opacity: [1, 0.4, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
@@ -289,10 +277,9 @@ export default function Hero() {
               </FloatingPill>
             </div>
 
-            {/* Footer */}
-            <div className="relative -mt-2 space-y-3 px-6 pb-6 z-20">
+            <div className="relative -mt-2 space-y-2.5 px-5 pb-5 z-20">
               <div className="flex items-baseline gap-3">
-                <span className="font-display text-[1.75rem] font-light leading-none text-background/95">
+                <span className="font-display text-[1.55rem] font-light leading-none text-background/95">
                   {profile.name}
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.18em] text-background/38">
@@ -300,7 +287,7 @@ export default function Hero() {
                 </span>
               </div>
 
-              <div className="flex items-center gap-3 rounded-[14px] border border-white/10 bg-white/5 px-4 py-3">
+              <div className="flex items-center gap-3 rounded-[14px] border border-white/10 bg-white/5 px-4 py-2.5">
                 <motion.span
                   animate={{ opacity: [1, 0.3, 1] }}
                   transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
@@ -312,8 +299,7 @@ export default function Hero() {
                 </p>
               </div>
 
-              {/* Tech chips */}
-              <div className="flex flex-wrap gap-2 pt-1">
+              <div className="flex flex-wrap gap-2 pt-0.5">
                 {["Next.js", "LangChain", "GenAI", "Node.js"].map((tag, i) => (
                   <motion.span
                     key={tag}
