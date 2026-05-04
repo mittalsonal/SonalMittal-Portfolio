@@ -9,6 +9,7 @@ interface MagneticButtonProps {
   className?: string;
   download?: boolean;
   external?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 const variantClasses: Record<NonNullable<MagneticButtonProps["variant"]>, string> = {
@@ -26,7 +27,8 @@ export default function MagneticButton({
   variant = "dark",
   className = "",
   download,
-  external
+  external,
+  onClick,
 }: MagneticButtonProps) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -55,6 +57,7 @@ export default function MagneticButton({
       download={download}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
+      onClick={onClick}
       onMouseMove={handleMove}
       onMouseLeave={reset}
       onBlur={reset}

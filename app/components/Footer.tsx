@@ -7,7 +7,7 @@ export default function Footer() {
         <p>&copy; 2026 {profile.name}. All rights reserved.</p>
         <div className="flex flex-wrap items-center gap-5">
           <a href="/#home" data-cursor="interactive">
-            Homefu
+            Home
           </a>
           <a href="/#about-me" data-cursor="interactive">
             About
