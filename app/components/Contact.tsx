@@ -38,17 +38,19 @@ function ContactRow({
   return (
     <a
       href={href}
-      className="flex items-center justify-center gap-4 text-center text-foreground transition-colors duration-300 hover:text-walnut sm:justify-start sm:text-left"
+      className="flex items-center gap-4 text-foreground transition-colors duration-300 hover:text-walnut"
       data-cursor="interactive"
     >
-      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-line/70 bg-white/60 shadow-soft">
+      <div className="flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full border border-line/70 bg-white/60 shadow-soft">
         {icon}
       </div>
-      <div>
+      <div className="min-w-0">
         <p className="text-[11px] uppercase tracking-[0.3em] text-muted">
           {label}
         </p>
-        <p className="mt-1 text-[18px] leading-8 text-foreground">{value}</p>
+        <p className="mt-0.5 break-all text-[15px] sm:text-[18px] sm:break-normal leading-7 text-foreground">
+          {value}
+        </p>
       </div>
     </a>
   );
@@ -184,21 +186,22 @@ export default function Contact() {
 
           <motion.div
             variants={fadeUp(0.18)}
-            className="flex flex-col items-center text-center lg:items-start lg:text-left"
+            className="flex flex-col items-start text-left lg:items-start lg:text-left"
           >
-            <p className="max-w-[720px] text-[16px] leading-9 text-[#463b34]">
+            <p className="w-full max-w-[720px] text-center text-[16px] leading-9 text-[#463b34] lg:text-left">
               I&apos;m open to thoughtful collaborations, ambitious full-time
               roles, and creative engineering work where design sensitivity and
               system thinking can live in the same room.
             </p>
 
-            <div className="mt-10 space-y-6">
+            {/* Contact rows — left-aligned on all sizes, full width on mobile */}
+            <div className="mt-10 w-full max-w-sm space-y-5 lg:max-w-none">
               <ContactRow
                 label="Email"
                 value={profile.email}
                 href={`mailto:${profile.email}`}
                 icon={
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M4 7.5 12 13l8-5.5"
                       stroke="currentColor"
@@ -224,7 +227,7 @@ export default function Contact() {
                 value={profile.phone}
                 href={`tel:${profile.phone.replace(/\s+/g, "")}`}
                 icon={
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M6.5 4.5h3l1.5 4-2 1.5a14 14 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 6.7 2 2 0 0 1 6.5 4.5Z"
                       stroke="currentColor"
@@ -237,7 +240,7 @@ export default function Contact() {
               />
             </div>
 
-            <div className="mt-10 flex justify-center lg:justify-start">
+            <div className="mt-10 flex w-full justify-center lg:justify-start">
               <div className="inline-flex items-center gap-3 rounded-full border border-foreground px-6 py-3 text-sm uppercase tracking-[0.22em] text-foreground shadow-soft">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#7EB58A]" />
                 Open to opportunities

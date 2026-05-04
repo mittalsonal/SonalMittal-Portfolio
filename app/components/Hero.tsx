@@ -59,20 +59,31 @@ export default function Hero() {
   };
 
   // ✅ Updated headline: "I build scalable systems powered by intelligent decision-making."
+  // const headline = [
+  //   [
+  //     { text: "I build", italic: false, walnut: false },
+  //     { text: "scalable", italic: true, walnut: true },
+  //   ],
+  //   [
+  //     { text: "systems", italic: false, walnut: false },
+  //     { text: "powered by", italic: false, walnut: false },
+  //   ],
+  //   [
+  //     { text: "intelligent", italic: true, walnut: false, muted: true },
+  //     { text: "decision-making.", italic: true, walnut: false, muted: true },
+  //   ],
+  // ];
+
   const headline = [
-    [
-      { text: "I build", italic: false, walnut: false },
-      { text: "scalable", italic: true, walnut: true },
-    ],
-    [
-      { text: "systems", italic: false, walnut: false },
-      { text: "powered by", italic: false, walnut: false },
-    ],
-    [
-      { text: "intelligent", italic: true, walnut: false, muted: true },
-      { text: "decision-making.", italic: true, walnut: false, muted: true },
-    ],
-  ];
+  [
+    { text: "I build", italic: false, walnut: false },
+    { text: "scalable,", italic: false, walnut: false },
+  ],
+  [
+    { text: "intelligent", italic: true, walnut: true },
+    { text: "systems.", italic: false, walnut: false },
+  ],
+];
 
   return (
     <section

@@ -81,10 +81,10 @@ export default function Navbar() {
             >
               <Image
                 src="/images/portfolio_logo.png"
-                alt="S · M logo"
-                width={72}
-                height={36}
-                className="h-9 w-auto object-contain"
+                alt="Sonal Mittal logo"
+                width={80}
+                height={40}
+                className="h-12 w-auto object-contain opacity-60"
                 priority
               />
             </a>
@@ -164,7 +164,7 @@ export default function Navbar() {
             <div className="mb-8">
               <Image
                 src="/images/portfolio_logo.png"
-                alt="S · M logo"
+                alt="Sonal Mittal logo"
                 width={80}
                 height={40}
                 className="h-10 w-auto object-contain opacity-60"

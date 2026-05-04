@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import ChatWidget from "@/app/components/ChatWidget";
 import Cursor from "@/app/components/Cursor";
 import Footer from "@/app/components/Footer";
@@ -18,49 +20,37 @@ export default function ProjectsPage() {
 
         <header className="px-4 pt-4">
           <div className="shell">
-            <div className="flex flex-col gap-6 rounded-[30px] border border-line/70 bg-[#f7f2eb]/80 px-6 py-6 shadow-soft backdrop-blur-xl sm:px-8 sm:py-7">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <a
-                  href="/"
-                  className="font-display text-xl uppercase tracking-[0.4em] text-foreground"
-                  data-cursor="interactive"
-                >
-                  S.M.
-                </a>
+            <div className="flex items-center justify-between rounded-[30px] border border-line/70 bg-[#f7f2eb]/80 px-5 py-3.5 shadow-soft backdrop-blur-xl sm:px-7 sm:py-4">
+              {/* Logo */}
+              <a href="/" data-cursor="interactive" className="shrink-0">
+                <Image
+                  src="/images/portfolio_logo.png"
+                  alt="S.M. logo"
+                  width={48}
+                  height={48}
+                  className="h-10 w-auto sm:h-11"
+                />
+              </a>
 
-                <div className="flex flex-wrap gap-3">
-                  <MagneticButton href="/" variant="ghost">
-                    Back Home
-                  </MagneticButton>
-                  <MagneticButton href="/#contact" variant="dark">
-                    Let&apos;s Talk
-                  </MagneticButton>
-                </div>
-              </div>
-
-              <div className="grid gap-5 lg:grid-cols-[1fr_0.8fr] lg:items-end">
-                <div>
-                  <p className="editorial-label">Extended showcase</p>
-                  <h1 className="mt-4 text-balance text-[clamp(3rem,7vw,5.8rem)] font-light leading-[0.95] italic">
-                    All projects, experiments, and concept builds.
-                  </h1>
-                </div>
-                <p className="max-w-xl text-[15px] leading-8 text-[#6b5f54]">
-                  This page expands the portfolio shelf with the core shipped work
-                  plus a few additional concept cards to help present a broader
-                  visual showcase for now.
-                </p>
+              {/* Nav actions */}
+              <div className="flex items-center gap-2.5 sm:gap-3">
+                <MagneticButton href="/" variant="ghost">
+                  Back Home
+                </MagneticButton>
+                <MagneticButton href="/#contact" variant="dark">
+                  Let&apos;s Talk
+                </MagneticButton>
               </div>
             </div>
           </div>
         </header>
 
-        <main>
+        <main className="[&_.section-space]:pt-8 sm:[&_.section-space]:pt-10">
           <Projects
             items={showcaseProjects}
-            eyebrow="All projects"
-            title="A broader project archive"
-            description="Real portfolio work first, followed by a few polished concept cards to round out the showcase page until more case studies are added."
+            eyebrow="Extended showcase"
+            title="All projects, experiments, and concept builds."
+            description="Core shipped work plus a few polished concept cards to round out the showcase."
           />
         </main>
 

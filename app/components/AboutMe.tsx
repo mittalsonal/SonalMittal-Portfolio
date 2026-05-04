@@ -17,9 +17,10 @@ export default function AboutMe() {
         variants={staggerContainer}
         className="grid gap-12 border-y border-line/60 py-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 lg:py-14"
       >
+        {/* IMAGE — order-2 on mobile, order-1 on lg */}
         <motion.div
           variants={fadeUp(0)}
-          className="relative flex min-h-[560px] items-start justify-center overflow-hidden pt-12 sm:pt-14"
+          className="relative flex min-h-[560px] items-start justify-center overflow-hidden pt-12 sm:pt-14 order-2 lg:order-1"
         >
           <div className="absolute left-[8%] top-[10%] h-28 w-28 rounded-full border border-walnut/15 bg-white/30" />
           <div className="absolute bottom-[2%] left-[-8%] h-[360px] w-[360px] rounded-full bg-walnut/8 blur-2xl" />
@@ -36,23 +37,26 @@ export default function AboutMe() {
             />
             <div className="absolute inset-0 rounded-[170px] bg-gradient-to-b from-white/10 via-transparent to-walnut/8" />
           </div>
-
-          
         </motion.div>
 
+        {/* TEXT — on lg this is one column; on mobile we split into order-1 (header) and order-3 (body) */}
         <motion.div
           variants={fadeUp(0.1)}
-          className="flex flex-col justify-center"
+          className="flex flex-col justify-center lg:order-2"
         >
-          <p className="editorial-label">Full Stack Developer | AI Engineer</p>
-          <h2 className="mt-4 font-sans text-[clamp(3.3rem,8vw,6.2rem)] font-semibold uppercase leading-[0.9] text-foreground">
-            About Me
-          </h2>
-          <p className="mt-3 font-display text-[clamp(2rem,4vw,3.35rem)] font-light italic leading-none text-walnut">
-            Hi there, I&apos;m Sonal.
-          </p>
+          {/* Header block — order-1 on mobile (shows first) */}
+          <div className="order-1 lg:order-none">
+            <p className="editorial-label">Full Stack Developer | AI Engineer</p>
+            <h2 className="mt-4 font-sans text-[clamp(3.3rem,8vw,6.2rem)] font-semibold uppercase leading-[0.9] text-foreground">
+              About Me
+            </h2>
+            <p className="mt-3 font-display text-[clamp(2rem,4vw,3.35rem)] font-light italic leading-none text-walnut">
+              Hi there, I&apos;m Sonal.
+            </p>
+          </div>
 
-          <div className="mt-8 max-w-[760px] space-y-6 text-[16px] leading-9 text-[#463b34]">
+          {/* Body block — order-3 on mobile (shows after image) */}
+          <div className="order-3 lg:order-none mt-8 max-w-[760px] space-y-6 text-[16px] leading-9 text-[#463b34]">
             <p>
               I am a full stack developer | AI engineer with a strong interest in building
               intelligent, scalable products that feel elegant in use and
@@ -65,13 +69,8 @@ export default function AboutMe() {
               flows, or integrating LLM and retrieval workflows in a way that
               actually helps users.
             </p>
-            <p>
-              What matters most to me is building technology with clarity,
-              care, and usefulness, products that are thoughtful in design and
-              strong in execution.
-            </p>
+            
           </div>
-
         </motion.div>
       </motion.div>
     </div>

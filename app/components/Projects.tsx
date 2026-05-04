@@ -45,7 +45,7 @@ export default function Projects({
 
         <motion.div
           variants={staggerContainer}
-          className="grid auto-rows-fr gap-5 md:grid-cols-2 xl:grid-cols-3"
+          className="grid gap-5 md:auto-rows-fr md:grid-cols-2 xl:grid-cols-3"
         >
           {items.map((project, index) => (
             <motion.div key={project.id} variants={fadeUp(0.08)}>
