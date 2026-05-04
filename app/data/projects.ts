@@ -88,22 +88,23 @@ export const projects: Project[] = [
 ];
 
 export const mockProjects: Project[] = [
-  // {
-  //   id: "insight-dashboard",
-  //   title: "Insight Dashboard",
-  //   year: "2026",
-  //   accent: "cream",
-  //   label: "Analytics concept",
-  //   tech: ["Next.js", "TypeScript", "Charts", "PostgreSQL"],
-  //   summary:
-  //     "A premium analytics workspace designed to turn business signals into clean, actionable decision flows.",
-  //   impact:
-  //     "Created a calmer reporting experience with role-based dashboards, modular widgets, and faster executive visibility.",
-  //   metric: "Executive-ready reporting",
-  //   imagePlaceholder: "Data Panels",
-  //   imageHint: "Filters, charts, KPI snapshots",
-  //   isMock: true
-  // },
+  {
+  id: "plant-chat-platform",
+  image: "/images/Project/plantchat.png",
+  title: "Plant Chat",
+  year: "2026",
+  accent: "cream",
+  label: "AI-powered product",
+  tech: ["Next.js", "React", "Node.js", "AI/LLM", "Data Analytics"],
+  summary:
+    "A next-generation wellness platform that blends AI, plant-based research, and user-generated data to deliver personalized health insights and holistic guidance.",
+  impact:
+    "Transformed traditional wellness exploration into an interactive, data-driven experience through AI recommendations, surveys, and continuous learning flows.",
+  metric: "Evidence-informed, AI-guided wellness ecosystem",
+  imagePlaceholder: "Wellness Journey Interface",
+  imageHint: "AI chat, surveys, insights, plant-based health",
+  link: "https://plantchat.com/"
+},
   // {
   //   id: "vision-commerce-assistant",
   //   title: "Vision Commerce Assistant",
