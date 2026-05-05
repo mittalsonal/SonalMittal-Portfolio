@@ -23,6 +23,12 @@ const borderToneClasses: Record<Project["accent"], string> = {
   walnut: "border-white/15"
 };
 
+const visitButtonClasses: Record<Project["accent"], string> = {
+  cream: "border-foreground/20 text-foreground/70 hover:bg-foreground/8 hover:border-foreground/40 hover:text-foreground",
+  dark: "border-white/20 text-background/70 hover:bg-white/10 hover:border-white/40 hover:text-background",
+  walnut: "border-white/20 text-background/70 hover:bg-white/10 hover:border-white/40 hover:text-background"
+};
+
 interface ProjectCardProps {
   project: Project;
   index: number;
@@ -43,6 +49,7 @@ export default function ProjectCard({
       className={baseCardClasses}
       data-cursor="interactive"
     >
+      {/* Media */}
       <div
         className={`relative overflow-hidden rounded-[18px] sm:rounded-[22px] border p-0 ${mediaClasses[project.accent]} ${borderToneClasses[project.accent]}`}
       >
@@ -50,9 +57,7 @@ export default function ProjectCard({
         <div className="absolute bottom-[-20%] right-[-8%] h-24 w-24 rounded-full bg-current/10 blur-2xl" />
         <div className="absolute inset-x-5 top-1/2 h-px -translate-y-1/2 bg-current/10" />
 
-        <div
-          className="relative flex aspect-[16/10] overflow-hidden rounded-[14px] sm:rounded-[18px] border border-current/10 bg-white/10"
-        >
+        <div className="relative flex aspect-[16/10] overflow-hidden rounded-[14px] sm:rounded-[18px] border border-current/10 bg-white/10">
           {project.image ? (
             <Image
               src={project.image}
@@ -84,12 +89,13 @@ export default function ProjectCard({
         </div>
       </div>
 
-      <div className="mt-4 sm:mt-6">
-        <p className="text-[11px] uppercase tracking-[0.34em] text-current/60">
+      {/* Content */}
+      <div className="mt-4 sm:mt-4">
+        {/* <p className="text-[11px] uppercase tracking-[0.34em] text-current/60">
           {String(index + 1).padStart(2, "0")} /{" "}
           {String(total).padStart(2, "0")}
-        </p>
-        <h3 className="mt-3 sm:mt-4 text-[1.7rem] sm:text-[2rem] font-light leading-tight">
+        </p> */}
+        <h3 className=" text-[1.7rem] sm:text-[2rem] font-light leading-tight">
           {project.title}
         </h3>
         <p className="mt-2 sm:mt-3 text-sm uppercase tracking-[0.22em] text-current/55">
@@ -100,6 +106,7 @@ export default function ProjectCard({
         </p>
       </div>
 
+      {/* Tags */}
       <div className="mt-4 sm:mt-6 flex flex-wrap gap-2">
         {project.tech.map((item) => (
           <span
@@ -110,6 +117,34 @@ export default function ProjectCard({
           </span>
         ))}
       </div>
+
+      {/* Visit Button */}
+      {project.link && (
+        <div className="mt-5 sm:mt-6">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] transition-all duration-200 ${visitButtonClasses[project.accent]}`}
+          >
+            Visit Project
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M7 17L17 7" />
+              <path d="M7 7h10v10" />
+            </svg>
+          </a>
+        </div>
+      )}
     </motion.article>
   );
 }

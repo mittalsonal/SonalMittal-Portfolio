@@ -53,11 +53,28 @@ export const projects: Project[] = [
   imageHint: "Kitchen remodels, residential projects, service sections",
   link: "https://bluecollarbuilding.com/"
 },
+  {
+  id: "relisync-crm-platform",
+  image: "/images/Project/venusxio_space.png",
+  title: "Venusxio Space CRM Platform",
+  year: "2026",
+  accent: "dark",
+  label: "Full-stack product",
+  tech: ["React", "Next.js", "Node.js", "MongoDB", "CRM Systems"],
+  summary:
+    "A scalable real estate CRM platform that centralizes property listings, buyer management, visit tracking, and team collaboration into one intelligent system.",
+  impact:
+    "Enhanced operational efficiency for property advisors by simplifying lead management, improving visibility across listings, and enabling data-driven decision making.",
+  metric: "End-to-end real estate workflow automation",
+  imagePlaceholder: "CRM Dashboard & Analytics",
+  imageHint: "Dashboard, leads, visits, analytics, collaboration",
+  link: "https://relisync.akoodedemo.com/"
+},
 {
     id: "linkedin-post-generator",
     title: "LinkedIn Post Generator",
     year: "2024",
-    accent: "dark",
+    accent: "walnut",
     label: "LLM workflow",
     tech: ["LLaMA 3.2", "LangChain", "Python", "Groq Cloud", "Streamlit"],
     summary:
@@ -69,22 +86,6 @@ export const projects: Project[] = [
     imageHint: "Draft generation, refinement, tone control",
     link: "https://github.com/mittalsonal/Linkdin-Post-Generator-" // 🔗 replace with real URL
   },
-  {
-  id: "relisync-crm-platform",
-  title: "Relisync CRM Platform",
-  year: "2026",
-  accent: "walnut",
-  label: "Full-stack product",
-  tech: ["React", "Next.js", "Node.js", "MongoDB", "CRM Systems"],
-  summary:
-    "A scalable real estate CRM platform that centralizes property listings, buyer management, visit tracking, and team collaboration into one intelligent system.",
-  impact:
-    "Enhanced operational efficiency for property advisors by simplifying lead management, improving visibility across listings, and enabling data-driven decision making.",
-  metric: "End-to-end real estate workflow automation",
-  imagePlaceholder: "CRM Dashboard & Analytics",
-  imageHint: "Dashboard, leads, visits, analytics, collaboration",
-  link: "https://relisync.akoodedemo.com/"
-}
 ];
 
 export const mockProjects: Project[] = [
