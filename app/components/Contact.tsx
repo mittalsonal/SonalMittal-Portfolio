@@ -222,7 +222,7 @@ export default function Contact() {
                 }
               />
 
-              <ContactRow
+              {/* <ContactRow
                 label="Phone"
                 value={profile.phone}
                 href={`tel:${profile.phone.replace(/\s+/g, "")}`}
@@ -237,7 +237,7 @@ export default function Contact() {
                     />
                   </svg>
                 }
-              />
+              /> */}
             </div>
 
             <div className="mt-10 flex w-full justify-center lg:justify-start">
