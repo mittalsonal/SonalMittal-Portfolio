@@ -68,7 +68,7 @@ export const projects: Project[] = [
   metric: "End-to-end real estate workflow automation",
   imagePlaceholder: "CRM Dashboard & Analytics",
   imageHint: "Dashboard, leads, visits, analytics, collaboration",
-  link: "https://relisync.akoodedemo.com/"
+  link: "https://venusxiospace.com/"
 },
 {
     id: "linkedin-post-generator",
