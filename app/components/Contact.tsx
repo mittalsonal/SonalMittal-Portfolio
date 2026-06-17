@@ -11,6 +11,10 @@ import { fadeUp, staggerContainer, viewport } from "@/app/utils/animations";
 // Sub-components
 // ---------------------------------------------------------------------------
 
+function gmailComposeUrl(email: string) {
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+}
+
 function ContactRow({
   icon,
   label,
@@ -271,18 +275,14 @@ export default function Contact() {
               />
             </div>
 
-            {/* Status badge */}
-            <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-line/70 bg-white/60 px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-foreground shadow-soft">
-                <span className="h-2 w-2 rounded-full bg-[#7EB58A] shadow-[0_0_8px_rgba(126,181,138,0.7)]" />
-                Available for opportunities
-              </div>
-            </div>
+            
 
             {/* CTA buttons */}
             <div className="mt-4 flex flex-wrap items-center gap-3">
               <a
-                href={`mailto:${profile.email}`}
+                href={gmailComposeUrl(profile.email)}
+                target="_blank"
+                rel="noreferrer"
                 data-cursor="interactive"
                 className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full bg-foreground px-6 py-3 text-[13px] uppercase tracking-[0.18em] text-background shadow-soft transition-transform duration-300 hover:-translate-y-0.5"
               >
