@@ -26,8 +26,8 @@ export default function HomePage() {
 
         <main className="relative">
           <HeroSection />
-          <ProjectsSection />
           <AboutMeSection />
+          <ProjectsSection />
           <AboutSection />
           {/* <ProcessSection /> */}
           <ContactSection />
