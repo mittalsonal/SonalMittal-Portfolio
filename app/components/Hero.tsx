@@ -58,32 +58,36 @@ export default function Hero() {
     mouseY.set(e.clientY - rect.top - rect.height / 2);
   };
 
-  // ✅ Updated headline: "I build scalable systems powered by intelligent decision-making."
-  // const headline = [
-  //   [
-  //     { text: "I build", italic: false, walnut: false },
-  //     { text: "scalable", italic: true, walnut: true },
-  //   ],
-  //   [
-  //     { text: "systems", italic: false, walnut: false },
-  //     { text: "powered by", italic: false, walnut: false },
-  //   ],
-  //   [
-  //     { text: "intelligent", italic: true, walnut: false, muted: true },
-  //     { text: "decision-making.", italic: true, walnut: false, muted: true },
-  //   ],
-  // ];
-
   const headline = [
-  [
-    { text: "I build", italic: false, walnut: false },
-    { text: "scalable,", italic: false, walnut: false },
-  ],
-  [
-    { text: "intelligent", italic: true, walnut: true },
-    { text: "systems.", italic: false, walnut: false },
-  ],
-];
+    [
+      { text: "I build", italic: false, walnut: false },
+      { text: "scalable,", italic: false, walnut: false },
+    ],
+    [
+      { text: "intelligent", italic: true, walnut: true },
+      { text: "systems.", italic: false, walnut: false },
+    ],
+  ];
+
+  // ✅ Updated supporting label (was: FULL STACK DEVELOPER & AI ENGINEER)
+  const supportingLabel = "FULL-STACK ENGINEER · AI-POWERED PRODUCTS";
+
+  // ✅ Shorter, stronger description (was: profile.summary)
+  const heroDescription =
+    "I turn real-world problems into scalable digital products using full-stack development and Generative AI.";
+
+  // ✅ Updated stats (was: profile.stats — "2 Companies" / "AI/ML Core Domain" dropped)
+  const heroStats = [
+    { value: "4+", label: "Production Projects" },
+    { value: "1+", label: "Year Industry Experience" },
+    { value: "Full-Stack + AI", label: "Core Specialization" },
+  ];
+
+  // ✅ Updated availability copy (was: "Open to opportunities — May 2025 graduate")
+  const availabilityText = "Available for Full-Stack & AI Engineering roles";
+
+  // ✅ Reduced + reordered tags (was: ["Next.js", "LangChain", "GenAI", "Node.js"])
+  const techTags = ["NEXT.JS", "NODE.JS", "PYTHON", "GENAI"];
 
   return (
     <section
@@ -120,7 +124,7 @@ export default function Hero() {
               style={{ transformOrigin: "left" }}
               className="inline-block h-px w-8 bg-walnut/60"
             />
-            <span className="editorial-label">{profile.role}</span>
+            <span className="editorial-label">{supportingLabel}</span>
           </motion.div>
 
           <h1
@@ -155,12 +159,12 @@ export default function Hero() {
 
           {/* Bio */}
           <motion.p variants={fadeUp(0.4)} className="muted-copy mt-8 max-w-[500px]">
-            {profile.summary}
+            {heroDescription}
           </motion.p>
 
           {/* Stats */}
           <motion.div variants={fadeUp(0.46)} className="mt-8 flex gap-8">
-            {profile.stats.map((stat, i) => (
+            {heroStats.map((stat, i) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 16 }}
@@ -181,30 +185,33 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div variants={fadeUp(0.52)} className="mt-10 flex flex-wrap items-center gap-4">
-            <MagneticButton href="#projects" variant="dark">View Projects</MagneticButton>
-            <MagneticButton href={profile.resumePath} variant="ghost" download>Download Resume</MagneticButton>
+            <MagneticButton
+              href="#projects"
+              variant="dark"
+              className="group min-h-[44px] transition-transform duration-300 hover:-translate-y-0.5"
+            >
+              <span className="inline-flex items-center gap-1.5">
+                Explore My Work
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  ↗
+                </span>
+              </span>
+            </MagneticButton>
+            <MagneticButton
+              href={profile.resumePath}
+              variant="ghost"
+              download
+              className="group min-h-[44px] transition-colors duration-300 hover:border-foreground/40"
+            >
+              <span className="inline-flex items-center gap-1.5">
+                Download Resume
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-0.5">
+                  ↓
+                </span>
+              </span>
+            </MagneticButton>
           </motion.div>
 
-          {/* Social links */}
-          <motion.div variants={fadeUp(0.58)} className="mt-8 flex items-center gap-5">
-            {[
-              { label: "GitHub",   href: profile.github   },
-              { label: "LinkedIn", href: profile.linkedin },
-              { label: "Twitter",  href: profile.twitter  },
-            ].map((s) => (
-              <motion.a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noreferrer"
-                whileHover={{ y: -2, color: "var(--color-foreground, #1A1612)" }}
-                className="text-[10px] uppercase tracking-[0.25em] text-muted/55 transition-colors duration-200"
-              >
-                {s.label}
-              </motion.a>
-            ))}
-            <span className="h-px flex-1 max-w-[60px] bg-line/40" />
-          </motion.div>
         </motion.div>
 
         {/* ── RIGHT: Photo Card ── */}
@@ -213,7 +220,8 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.94, y: 60 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-          className="relative flex items-center justify-center lg:justify-end pb-10 lg:pb-16"
+          whileHover={{ y: -6 }}
+          className="relative flex items-center justify-center lg:justify-end pb-10 lg:pb-16 transition-transform duration-300"
         >
           <motion.div
             animate={{ rotate: 360 }}
@@ -239,17 +247,19 @@ export default function Hero() {
               >
                 Portfolio
               </motion.span>
+              {/* ✅ Role label added in place of static year (was: 2025) */}
               <motion.span
                 initial={{ opacity: 0, x: 12 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8, duration: 0.5 }}
-                className="text-xs text-background/30"
+                className="text-[10px] uppercase tracking-[0.2em] text-background/40"
               >
-                2025
+                AI Engineer
               </motion.span>
             </div>
 
-            <div className="relative mt-3 h-[340px] sm:h-[380px] lg:h-[400px] w-full overflow-hidden">
+            {/* ✅ Reduced image height for more breathing room below (was: h-[340px] sm:h-[380px] lg:h-[400px]) */}
+            <div className="relative mt-3 h-[290px] sm:h-[320px] lg:h-[340px] w-full overflow-hidden">
               <p className="pointer-events-none absolute inset-0 flex items-center justify-center select-none font-display text-[6rem] italic text-walnut/6 leading-none z-0">
                 Sonal
               </p>
@@ -272,25 +282,12 @@ export default function Hero() {
 
               <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-deep via-deep/65 to-transparent z-10" />
               <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-deep/20 to-transparent z-10" />
-
-              {/* <FloatingPill className="right-4 top-4 z-20" delay={1.0}>
-                <span className="h-1.5 w-1.5 rounded-full bg-walnut/60" />
-                <span className="text-[10px] uppercase tracking-[0.2em] text-background/55">Featured</span>
-              </FloatingPill> */}
-
-              {/* <FloatingPill className="left-4 bottom-16 z-20" delay={1.2}>
-                <motion.span
-                  animate={{ opacity: [1, 0.4, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="h-2 w-2 rounded-full bg-[#7EB58A] shadow-[0_0_10px_rgba(126,181,138,0.8)]"
-                />
-                <span className="text-[10px] text-background/60">Available for hire</span>
-              </FloatingPill> */}
             </div>
 
-            <div className="relative -mt-2 space-y-2.5 px-5 pb-5 z-20">
+            <div className="relative -mt-2 space-y-3 px-5 pb-5 z-20">
               <div className="flex items-baseline gap-3">
-                <span className="font-display text-[1.55rem] font-light leading-none text-background/95">
+                {/* ✅ Name made slightly larger/clearer (was: text-[1.55rem]) */}
+                <span className="font-display text-[1.75rem] font-light leading-none text-background">
                   {profile.name}
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.18em] text-background/38">
@@ -305,23 +302,31 @@ export default function Hero() {
                   className="h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#7EB58A] shadow-[0_0_18px_rgba(126,181,138,0.75)]"
                 />
                 <p className="text-sm text-background/70">
-                  <span className="font-medium text-background">{profile.availability}</span>
-                  {" "}— {profile.graduation}
+                  <span className="font-medium text-background">{availabilityText}</span>
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2 pt-0.5">
-                {["Next.js", "LangChain", "GenAI", "Node.js"].map((tag, i) => (
-                  <motion.span
-                    key={tag}
+              {/* Social links */}
+              <div className="flex flex-wrap gap-3 pt-0.5">
+                {[
+                  { label: "GitHub",   href: profile.github   },
+                  { label: "LinkedIn", href: profile.linkedin },
+                  { label: "X",        href: profile.twitter  },
+                ].map((s, i) => (
+                  <motion.a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 1.1 + i * 0.07, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                     whileHover={{ scale: 1.07, borderColor: "rgba(255,255,255,0.28)" }}
-                    className="rounded-full border border-white/8 bg-white/5 px-3 py-1 text-[10px] uppercase tracking-[0.15em] text-background/45 cursor-default transition-colors duration-200"
+                    className="inline-flex items-center gap-1 rounded-full border border-white/8 bg-white/5 px-3 py-1 text-[10px] uppercase tracking-[0.15em] text-background/45 transition-colors duration-200 hover:text-background/80"
                   >
-                    {tag}
-                  </motion.span>
+                    {s.label}
+                    <span className="text-[9px] opacity-60">↗</span>
+                  </motion.a>
                 ))}
               </div>
             </div>
@@ -336,11 +341,14 @@ export default function Hero() {
         transition={{ delay: 2.0, duration: 0.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-[9px] uppercase tracking-[0.3em] text-muted/35">Scroll</span>
+        {/* ✅ Clearer scroll copy (was: "Scroll") */}
+        <span className="text-[10px] uppercase tracking-[0.3em] text-muted/55">
+          Scroll to explore ↓
+        </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="h-9 w-px bg-gradient-to-b from-walnut/35 to-transparent"
+          className="h-9 w-px bg-gradient-to-b from-walnut/45 to-transparent"
         />
       </motion.div>
     </section>
