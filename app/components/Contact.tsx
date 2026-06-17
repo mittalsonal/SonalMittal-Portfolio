@@ -237,7 +237,7 @@ export default function Contact() {
                 <p className="font-display text-[22px] italic text-foreground">
                   {profile.name}
                 </p>
-                <p className="mt-0.5 font-display text-[12px] italic text-muted">
+                <p className="font-display text-[12px] italic text-muted">
                   Full-Stack + AI Engineer
                 </p>
               </div>
