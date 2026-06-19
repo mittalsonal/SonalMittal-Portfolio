@@ -286,7 +286,7 @@ export default function Contact() {
                 data-cursor="interactive"
                 className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full bg-foreground px-6 py-3 text-[13px] uppercase tracking-[0.18em] text-background shadow-soft transition-transform duration-300 hover:-translate-y-0.5"
               >
-                Send Me an Email
+                {/* Send Me an Email */}
                 <span className="text-[11px]">↗</span>
               </a>
               <a
