@@ -8,3 +8,5 @@ backend/app/__pycache__
 backend/app/routes/__pycache__
 backend/app/services/__pycache__
 backend/app/utils/__pycache__
+
+.env.local
